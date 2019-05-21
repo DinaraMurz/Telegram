@@ -3,23 +3,26 @@
                     xmlns:local="clr-namespace:Telegram">
     <Style TargetType="TextBlock">
         <Style.Setters>
-            <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>
         </Style.Setters>
     </Style>
 
     <Style TargetType="Grid">
         <Style.Setters>
-            <Setter Property="Background" >
-                <Setter.Value>
-                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="White" Offset="1"/>
-                        <GradientStop Color="DeepSkyBlue"/>
-                        <GradientStop Color="White" Offset="0.173"/>
-                        <!--<GradientStop Color="White" Offset="0.7"/>-->
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
+            <Setter Property="Background" Value="White"/>
+        </Style.Setters>
+    </Style>
+
+    <Style TargetType="Rectangle">
+        <Style.Setters>
+            <Setter Property="Fill" Value="#FF54759E"/>
+        </Style.Setters>
+    </Style>
+
+    <Style TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Background" Value="#FF44637E"/>
+            <Setter Property="Foreground" Value="White"/>
         </Style.Setters>
     </Style>
 </ResourceDictionary>

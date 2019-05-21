@@ -20,6 +20,7 @@ namespace Telegram
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool isLightTheme = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,16 @@ namespace Telegram
 
         private void ButtonClick(object sender, RoutedEventArgs e)
         {
-            
+            if (isLightTheme)
+            {
+                themeStyle.Source = new Uri("DarkTheme.xaml", UriKind.Relative);
+                isLightTheme = false;
+            }
+            else
+            {
+                themeStyle.Source = new Uri("LightTheme.xaml", UriKind.Relative);
+                isLightTheme = true;
+            }
         }
     }
 }

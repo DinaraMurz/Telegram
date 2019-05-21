@@ -8,14 +8,26 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
 
-        <!--<ResourceDictionary Source="LightTheme.xaml"/>-->
-        
-        
+        <ResourceDictionary x:Name="themeStyle" Source="LightTheme.xaml"/>
 
-        <LinearGradientBrush x:Key="DrakThemeColors" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+
+
+        <!--<LinearGradientBrush x:Key="DrakThemeColors" EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
             <GradientStop Color="#FF292929" Offset="1"/>
             <GradientStop Color="Black"/>
         </LinearGradientBrush>
+
+        <Style TargetType="ListBox">
+            <Style.Setters>
+                <Setter Property="Background" Value="#FF2E2E2E"/>
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#FF0E0E0E"/>
+                    <Setter Property="Foreground" Value="#FF0E0E0E"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
         <Style TargetType="Ellipse">
             <Style.Setters>
@@ -29,15 +41,16 @@
                 <Setter Property="Foreground" Value="White"/>
             </Style.Setters>
         </Style>
-        
+
         <Style TargetType="TextBlock">
             <Style.Setters>
-                <!--<Setter Property="Background" Value="#FF3A3A3A"/>-->
+                -->
+        <!--<Setter Property="Background" Value="#FF3A3A3A"/>-->
+        <!--
                 <Setter Property="Foreground" Value="White"/>
             </Style.Setters>
         </Style>
-        
-        
+
 
         <Style TargetType="Grid">
             <Style.Setters>
@@ -47,44 +60,73 @@
                             <GradientStop Color="#FF232323" Offset="1"/>
                             <GradientStop Color="#FF474747"/>
                             <GradientStop Color="#FF474747" Offset="0.173"/>
-                            <!--<GradientStop Color="White" Offset="0.7"/>-->
+                            -->
+        <!--<GradientStop Color="White" Offset="0.7"/>-->
+        <!--
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
             </Style.Setters>
         </Style>
 
-        <Style TargetType="ListBox">
-            
-        </Style>
+        -->
+        <!--<Style TargetType="ListBox">
+            <Style.Setters>
+                <Setter Property="Style">
+                    <Setter.Value>
+                        <Style TargetType="ListBoxItem">
+                            <Style.Triggers>
+                                <Trigger Property="ListBoxItem.IsSelected" Value="True">
+                                    <Setter Property="Background" Value="Blue"/>
+                                    <Setter Property="Foreground" Value="White"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>-->
     </Window.Resources>
     <Grid RenderTransformOrigin="0.508,0.483">
-        
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="90*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="288*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="158*"/>
-            <ColumnDefinition Width="603*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="628*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox Text="Search" Margin="0,-2,0,0"/>
+        <TextBox Text="Search" Margin="0,0,0,68.451" Grid.Row="1" Grid.ColumnSpan="2"/>
 
-        <ListBox Grid.Column="0" Grid.Row="1" Background="#FF2E2E2E">
-            <TextBlock Text="SuperNick" Margin="5,5,5,5"/>
-            <TextBlock Text="SuperNick" Margin="5,5,5,5"/>
-            <TextBlock Text="SuperNick" Margin="5,5,5,5"/>
-            <TextBlock Text="SuperNick" Margin="5,5,5,5"/>
-        </ListBox>
-        <Button Click="ButtonClick" Content="Theme" Grid.Column="1" HorizontalAlignment="Left" Margin="571,2,0,0" VerticalAlignment="Top" Width="47"/>
-        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="40" Margin="0,357,0,0" Grid.Row="1" VerticalAlignment="Top" Width="628">
-            <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="Сообщение" VerticalAlignment="Top" Width="522" Margin="35,10,0,0"/>
-        </Grid>
-        <Ellipse Grid.Column="1"  HorizontalAlignment="Left" Height="20" Margin="571,367,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="20"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText" VerticalAlignment="Top" Grid.Column="1" Margin="10,268,0,0" Grid.Row="1" Height="84" Width="238"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText" VerticalAlignment="Top" Grid.Column="1" Margin="374,219,0,0" Grid.Row="1" Height="44" Width="244"/>
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText" VerticalAlignment="Top" Grid.Column="1" Margin="374,152,0,0" Grid.Row="1" Height="62" Width="244"/>
+        <ListBox Grid.Row="1" Margin="0,25,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" />
 
+
+        <TextBlock Text="SuperNick" Margin="10,30,10,45.451" Grid.Column="1" Grid.Row="1"/>
+        <TextBlock Text="SuperNick" Margin="10,41.549,10,223" Grid.Column="1" Grid.Row="2"/>
+        <TextBlock Text="SuperNick" Margin="10,85,10,278" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+
+        
+        <Ellipse Grid.Column="2"  HorizontalAlignment="Left" Height="19" Margin="591,258.549,0,0" Grid.Row="2" Stroke="Black" VerticalAlignment="Top" Width="19"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText" VerticalAlignment="Top" Grid.Column="2" Margin="10,169.549,0,0" Grid.Row="2" Height="84" Width="238"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText" VerticalAlignment="Top" Grid.Column="2" Margin="374,120.549,0,0" Grid.Row="2" Height="44" Width="244"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText" VerticalAlignment="Top" Grid.Column="2" Margin="374,53.549,0,0" Grid.Row="2" Height="62" Width="244"/>
+        <Rectangle HorizontalAlignment="Left" Height="33" Stroke="Black" VerticalAlignment="Top" Width="792" Grid.ColumnSpan="3"/>
+        <Rectangle HorizontalAlignment="Left" Height="35" Stroke="Black" VerticalAlignment="Top" Width="628" Margin="0,253.549,0,-1" Grid.Row="2" Grid.Column="2"/>
+
+        <TextBox HorizontalAlignment="Left" Height="19" TextWrapping="Wrap" Text="Сообщение" VerticalAlignment="Top" Width="522" Margin="18,258.549,0,0" Grid.Column="2" Grid.Row="2"/>
+
+        <Ellipse Fill="#FFEEC764" Margin="5,30,0,18.451" Grid.Row="1"/>
+        <Ellipse Fill="#FF585858" Margin="5,85,0,251" Grid.Row="1" Grid.RowSpan="2"/>
+        <Ellipse Fill="#FFCBCBCB" Margin="5,41.549,0,196" Grid.Row="2"/>
+
+        <TextBlock Text="SN" FontSize="16" Margin="18,42,5,28.451" Grid.Row="1" Foreground="White"/>
+        <TextBlock Text="SN" FontSize="16" Margin="18,53.549,5,208" Grid.Row="2" Foreground="White"/>
+        <TextBlock Text="SN" FontSize="16" Margin="18,98,5,262" Grid.Row="1" Foreground="White" Grid.RowSpan="2"/>
+
+        <Button Click="ButtonClick" Content="Theme" Grid.Column="2" HorizontalAlignment="Left" Margin="578,5,0,0" Width="40"/>
     </Grid>
 </Window>
